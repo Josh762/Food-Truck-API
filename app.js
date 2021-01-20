@@ -1,8 +1,13 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 
+
+// Import project config file
+const config = require('./config');
+
+console.log("***", config);
 // Initialize app constants
-const port = 3000; // TODO pull correct port from config file when implemented or default to 3000
+const port = config.app.port;
 
 // initialize express object
 const app = express();
