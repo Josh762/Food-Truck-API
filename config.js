@@ -5,7 +5,7 @@ const env = process.env.NODE_ENV; // 'dev' or 'test'
 
 const dev = {
   app: {
-    port: 3000 | process.env.PORT
+    port: process.env.PORT || 5000
   },
   db: {
     host: 'localhost',
@@ -16,7 +16,7 @@ const dev = {
 
 const test = {
   app: {
-    port: 3000 | process.env.PORT
+    port: process.env.PORT || 5000
   },
   db: {
     host: 'localhost',
@@ -29,5 +29,5 @@ const config = {
   dev,
   test
 };
-console.log('@@@ ', env);
+
 module.exports = config[env];
