@@ -19,7 +19,8 @@ app.use(bodyParser.json());
 // Connect to database
 mongoose.connect(dbConnectString, {
     useNewUrlParser: true,
-    useUnifiedTopology: true
+    useUnifiedTopology: true,
+    autoIndex: false
 });
 
 // Start the server
